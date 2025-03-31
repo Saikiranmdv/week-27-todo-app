@@ -4,8 +4,8 @@ WORKDIR /usr/src/app
 
 ARG DATABASE_URL
 # Generate Prisma Client before the build
-RUN bun run db:generate
 COPY . .
+RUN bun run db:generate
 
 
 # Ensure DATABASE_URL is available
